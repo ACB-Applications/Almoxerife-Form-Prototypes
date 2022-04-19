@@ -1,0 +1,246 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="adicionarItem.css">
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Dados do Requisitante</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label" for="numeroRequisicao">Requisição</label>
+								<input type="text" class="form-control" name="numeroRequisicao" id="numeroRequisicao">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label" for="situacao">Situação</label>
+								<input type="text" class="form-control" name="situacao" id="situacao">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label" for="estado">Estado</label>
+								<input type="text" class="form-control" name="estado" id="estado">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label" for="estabelecimento">Estabelecimento</label>
+								<select class="form-control" name="estabelecimento" id="estabelecimento">
+									<option>101</option>
+									<option>201</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<label class="control-label" for="nomeEstabelecimento">Nome do Estabelecimento</label>
+								<select class="form-control" name="nomeEstabelecimento" id="nomeEstabelecimento">
+									<option>ATLANTIC NICKEL</option>
+									<option>MINERADORA VALE VERDE</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label" for="usernameDataSUL">Requisitante</label>
+								<div class="input-group input-group-sm">
+									<div class="input-group-addon">
+										<i class="fluigicon fluigicon-user icon-sm"></i>
+									</div>
+									<input type="text" class="form-control" name="usernameDataSUL" id="usernameDataSUL">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label" for="quadroCalendarioInput">Data da Requisição</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fluigicon fluigicon-calendar icon-sm"></i>
+									</div>
+									<input type="text" class="form-control" name="dataRequisicao" id="dataRequisicao">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="narrativaRM">Narrativa</label>
+						<textarea class="form-control" name="narrativaRM" id="narrativaRM" rows="6"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Adicionar Pedido na Lista</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label" for="item">Código Item</label>
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control" name="codigoItem" id="codigoItem">
+									<span class="input-group-btn">
+										<button class="btn btn-blue-gradient" type="button">
+											<i class="fluigicon fluigicon-search icon-sm"></i>
+										</button>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="form-group">
+								<label class="control-label" for="descricaoItem">Desc. Item</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="descricaoItem" id="descricaoItem" readonly>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label" for="referencia">Referência</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="referencia" id="referencia">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label" for="unidadeMedida">Unidade de Medida</label>
+								<div class="input-group input-group-sm">
+									<div class="input-group-addon">
+										<i class="fluigicon fluigicon-query-gap icon-sm"></i>
+									</div>
+									<input type="text" class="form-control" name="unidadeMedida" id="unidadeMedida">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label" for="quantidadeRequisitada">Quandidade Requisitada</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="quantidadeRequisitada" id="quantidadeRequisitada">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="control-label" for="codigoUtilizacao">Código de Utilização</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="codigoUtilizacao" id="codigoUtilizacao">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label" for="ordemInvestimento">Ordem de Investimento</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="ordemInvestimento" id="ordemInvestimento">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label" for="conta">Conta</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="conta" id="conta">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label" for="centroCusto">Centro de Custo</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="centroCusto" id="centroCusto">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label" for="unidadeNegocio">Unidade de Negócio</label>
+								<div class="input-group-sm">
+									<input type="text" class="form-control" name="unidadeNegocio" id="unidadeNegocio">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label" for="precoUnitario">Preço Unitário</label>
+								<div class="input-group">
+									<span class="input-group-addon">R$</span>
+									<input type="text" class="form-control" name="precoUnitario" id="precoUnitario">
+									<span class="input-group-addon">.00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<button type="button" class="btn btn-blue-gradient" name="botaoAdicionar"
+									id="botaoAdicionar">Adicionar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<table class="table" tablename="tableNameAddRequisicao" noaddbutton="true" name="tableNameAddRequisicao"
+					nodeletebutton="true" id="tableNameAddRequisicao"
+					customfndelete="deleteRequisicao(this, 'tableNameAddRequisicao')">
+					<thead>
+						<tr></tr>
+					</thead>
+					<tr>
+						<td>
+							<div class="card">
+								<div class="card-body">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-1 modo_view">
+												<input type="button" name="buttaoDeleteRequisicao" id="buttaoDeleteRequisicao"
+													onclick="deleteRequisicao(this, 'tableNameAddRequisicao');" class="lixeiraCustomizada" />
+											</div>
+										</div>
+										<br />
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="adicionarItem.js"></script>
+
+</html>

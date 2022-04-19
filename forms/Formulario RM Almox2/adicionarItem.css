@@ -1,0 +1,12 @@
+.lixeiraCustomizada {
+  background: transparent;
+  background-image: url("flaticon-close.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  border: 0px;
+  cursor: pointer;
+  padding-top: 0px;
+  width: 24px;
+
+  color: darkgrey;
+}
