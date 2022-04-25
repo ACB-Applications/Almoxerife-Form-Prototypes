@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 	<link rel="stylesheet" href="adicionarItem.css">
 </head>
@@ -38,21 +39,12 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-2">
+						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label" for="estabelecimento">Estabelecimento</label>
 								<select class="form-control" name="estabelecimento" id="estabelecimento">
-									<option>101</option>
-									<option>201</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-5">
-							<div class="form-group">
-								<label class="control-label" for="nomeEstabelecimento">Nome do Estabelecimento</label>
-								<select class="form-control" name="nomeEstabelecimento" id="nomeEstabelecimento">
-									<option>ATLANTIC NICKEL</option>
-									<option>MINERADORA VALE VERDE</option>
+									<option value="101">101 - ATLANTIC NICKEL MINERACAO LTDA</option>
+									<option value="201">201 - MINERADORA VALE VERDE LTDA</option>
 								</select>
 							</div>
 						</div>
@@ -73,7 +65,7 @@
 					<div class="row">
 						<div class="col-md-2">
 							<div class="form-group">
-								<label class="control-label" for="quadroCalendarioInput">Data da Requisição</label>
+								<label class="control-label" for="dataRequisicao">Data da Requisição</label>
 								<div class="input-group">
 									<div class="input-group-addon">
 										<i class="fluigicon fluigicon-calendar icon-sm"></i>
@@ -97,11 +89,11 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="item">Código Item</label>
+								<label class="control-label" for="item">Código do Item</label>
 								<div class="input-group input-group-sm">
 									<input type="text" class="form-control" name="codigoItem" id="codigoItem">
 									<span class="input-group-btn">
-										<button class="btn btn-blue-gradient" type="button">
+										<button class="btn btn-blue-gradient" type="button" id="pesquisa-aprofundada">
 											<i class="fluigicon fluigicon-search icon-sm"></i>
 										</button>
 									</span>
@@ -110,7 +102,7 @@
 						</div>
 						<div class="col-md-5">
 							<div class="form-group">
-								<label class="control-label" for="descricaoItem">Desc. Item</label>
+								<label class="control-label" for="descricaoItem">Descrição do Item</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="descricaoItem" id="descricaoItem" readonly>
 								</div>
@@ -241,6 +233,10 @@
 		</form>
 	</div>
 </body>
+
 <script type="text/javascript" src="adicionarItem.js"></script>
+<script type="text/javascript" src="datapicker.js"></script>
+<script type="text/javascript" src="maskInput.js"></script>
+<script type="text/javascript" src="modalPesquisaAprofundadaItem.js"></script>
 
 </html>
