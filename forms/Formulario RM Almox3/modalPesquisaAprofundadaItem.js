@@ -5,16 +5,6 @@ $("[id=pesquisa-aprofundada]").click(function modalPesquisaAprofundada() {
       content: "",
       id: "fluig-modal",
       size: "large",
-      actions: [
-        {
-          label: "Save",
-          bind: "data-open-modal",
-        },
-        {
-          label: "Close",
-          autoClose: true,
-        },
-      ],
     },
     function (err, data) {
       if (err) {
