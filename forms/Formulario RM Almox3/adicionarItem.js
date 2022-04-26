@@ -1,9 +1,9 @@
 $(function () {
-  addCampoValorDescricao();
+  adicionarItem();
 });
 
-function addCampoValorDescricao() {
-  $("[name=botaoAdicionar]").click(function () {
+function adicionarItem() {
+  $("[name=botaoAdicionarItem]").click(function () {
     var index = wdkAddChild("tableNameAddRequisicao");
   });
 }
