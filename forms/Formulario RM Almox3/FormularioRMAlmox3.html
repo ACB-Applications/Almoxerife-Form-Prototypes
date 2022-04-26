@@ -1,13 +1,16 @@
 <html>
 
 <head>
+	<link rel="stylesheet" href="css/flaticonClose.css">
+	<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="css/required.css">
 	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
-	<link rel="stylesheet" href="adicionarItem.css">
 </head>
 
 <body>
@@ -21,19 +24,19 @@
 					<div class="row">
 						<div class="col-md-2">
 							<div class="form-group">
-								<label class="control-label" for="numeroRequisicao">Requisição</label>
+								<label class="control-label cor-preta" for="numeroRequisicao">Requisição</label>
 								<input type="text" class="form-control" name="numeroRequisicao" id="numeroRequisicao" readonly>
 							</div>
 						</div>
 						<div class="col-md-2">
 							<div class="form-group">
-								<label class="control-label" for="situacao">Situação</label>
+								<label class="control-label cor-preta" for="situacao">Situação</label>
 								<input type="text" class="form-control" name="situacao" id="situacao" readonly>
 							</div>
 						</div>
 						<div class="col-md-2">
 							<div class="form-group">
-								<label class="control-label" for="estado">Estado</label>
+								<label class="control-label cor-preta" for="estado">Estado</label>
 								<input type="text" class="form-control" name="estado" id="estado" readonly>
 							</div>
 						</div>
@@ -41,7 +44,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="estabelecimento">Estabelecimento</label>
+								<label class="control-label cor-preta required" for="estabelecimento">Estabelecimento</label>
 								<select class="form-control" name="estabelecimento" id="estabelecimento">
 									<option value="101">101 - ATLANTIC NICKEL MINERACAO LTDA</option>
 									<option value="201">201 - MINERADORA VALE VERDE LTDA</option>
@@ -52,8 +55,8 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="usernameDataSUL">Requisitante</label>
-								<div class="input-group input-group-sm">
+								<label class="control-label cor-preta required" for="usernameDataSUL">Requisitante</label>
+								<div class="input-group">
 									<div class="input-group-addon">
 										<i class="fluigicon fluigicon-user icon-sm"></i>
 									</div>
@@ -64,19 +67,19 @@
 					</div>
 					<div class="row">
 						<div class="col-md-2">
-							<div class="form-group">
-								<label class="control-label" for="dataRequisicao">Data da Requisição</label>
+							<div class="form-group ">
+								<label class="control-label cor-preta required" for="dataRequisicao">Data da Requisição</label>
 								<div class="input-group">
 									<div class="input-group-addon">
 										<i class="fluigicon fluigicon-calendar icon-sm"></i>
 									</div>
-									<input type="text" class="form-control" name="dataRequisicao" id="dataRequisicao">
+									<input type="text" class="form-control" name="DataRequisicao" id="dataRequisicao">
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="narrativaRM">Narrativa</label>
+						<label class="cor-preta" for="narrativaRM">Narrativa</label>
 						<textarea class="form-control" name="narrativaRM" id="narrativaRM" rows="6"></textarea>
 					</div>
 				</div>
@@ -87,9 +90,9 @@
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="form-group">
-								<label class="control-label" for="item">Código do Item</label>
+								<label class="control-label cor-preta required" for="item">Código do Item</label>
 								<div class="input-group input-group-sm">
 									<input type="text" class="form-control" name="codigoItem" id="codigoItem">
 									<span class="input-group-btn">
@@ -102,44 +105,46 @@
 						</div>
 						<div class="col-md-5">
 							<div class="form-group">
-								<label class="control-label" for="descricaoItem">Descrição do Item</label>
+								<label class="control-label cor-preta" for="descricaoItem">Descrição do Item</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="descricaoItem" id="descricaoItem" readonly>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="referencia">Referência</label>
+								<label class="control-label cor-preta" for="referencia">Referência</label>
 								<div class="input-group-sm">
-									<input type="text" class="form-control" name="referencia" id="referencia">
+									<input type="text" class="form-control" name="referencia" id="referencia" readonly>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="form-group">
-								<label class="control-label" for="unidadeMedida">Unidade de Medida</label>
+								<label class="control-label cor-preta" for="unidadeMedida">Unidade de Medida</label>
 								<div class="input-group input-group-sm">
 									<div class="input-group-addon">
 										<i class="fluigicon fluigicon-query-gap icon-sm"></i>
 									</div>
-									<input type="text" class="form-control" name="unidadeMedida" id="unidadeMedida">
+									<input type="text" class="form-control" name="unidadeMedida" id="unidadeMedida" readonly>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="form-group">
-								<label class="control-label" for="quantidadeRequisitada">Quandidade Requisitada</label>
+								<label class="control-label cor-preta required" for="quantidadeRequisitada">
+									Quandidade Requisitada
+								</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="quantidadeRequisitada" id="quantidadeRequisitada">
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-6">
 							<div class="form-group">
-								<label class="control-label" for="codigoUtilizacao">Código de Utilização</label>
+								<label class="control-label cor-preta" for="codigoUtilizacao">Código de Utilização</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="codigoUtilizacao" id="codigoUtilizacao">
 								</div>
@@ -147,33 +152,37 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="ordemInvestimento">Ordem de Investimento</label>
+								<label class="control-label cor-preta" for="ordemInvestimento">Ordem de Investimento</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="ordemInvestimento" id="ordemInvestimento">
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+					</div>
+					<div class="row">
+						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="conta">Conta</label>
+								<label class="control-label cor-preta" for="conta">Conta Contábil</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="conta" id="conta">
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+					</div>
+					<div class="row">
+						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="centroCusto">Centro de Custo</label>
+								<label class="control-label cor-preta" for="centroCusto">Centro de Custo</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="centroCusto" id="centroCusto">
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label" for="unidadeNegocio">Unidade de Negócio</label>
+								<label class="control-label cor-preta" for="unidadeNegocio">Unidade de Negócio</label>
 								<div class="input-group-sm">
 									<input type="text" class="form-control" name="unidadeNegocio" id="unidadeNegocio">
 								</div>
@@ -183,7 +192,7 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
-								<label class="control-label" for="precoUnitario">Preço Unitário</label>
+								<label class="control-label cor-preta" for="precoUnitario">Preço Unitário</label>
 								<div class="input-group">
 									<span class="input-group-addon">R$</span>
 									<input type="text" class="form-control" name="precoUnitario" id="precoUnitario">
@@ -192,12 +201,45 @@
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label cor-preta" for="prioridade-de-aprovacao">Prioridade de Aprovação</label>
+								<select class="form-control" name="prioridadeAprovacao" id="prioridade-de-aprovacao">
+									<option value="">Baixa</option>
+									<option value="">Média</option>
+									<option value="">Alta</option>
+									<option value="">Muito Alta</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="form-inline">
+								<div class="form-group">
+									<div class="custom-checkbox custom-checkbox-inline custom-checkbox-primary">
+										<input type="checkbox" id="checkbox-urgente" name="urgente">
+										<label class="cor-preta" for="urgente">Urgente</label>
+									</div>
+									<div class="custom-checkbox custom-checkbox-inline custom-checkbox-primary">
+										<input type="checkbox" id="checkbox-homologa-fornecedor" name="homologaFornecedor">
+										<label class="cor-preta" for="checkbox-homologa-fornecedor">Homologa Fornecedor</label>
+									</div>
+									<div class="custom-checkbox custom-checkbox-inline custom-checkbox-primary">
+										<input type="checkbox" id="checkbox-afeta-qualidade" name="afetaQualidade">
+										<label class="cor-preta" for="checkbox-afeta-qualidade">Afeta Qualidade</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<br>
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
-								<button type="button" class="btn btn-blue-gradient" name="botaoAdicionar"
-									id="botaoAdicionar">Adicionar</button>
+								<button type="button" class="btn btn-blue-gradient" name="botaoAdicionarItem"
+									id="botaoAdicionarItem">Adicionar</button>
 							</div>
 						</div>
 					</div>
@@ -236,6 +278,8 @@
 
 <script type="text/javascript" src="adicionarItem.js"></script>
 <script type="text/javascript" src="datapicker.js"></script>
+<script type="text/javascript" src="inserirDataAtual.js"></script>
+<script type="text/javascript" src="lockout.js"></script>
 <script type="text/javascript" src="maskInput.js"></script>
 <script type="text/javascript" src="modalPesquisaAprofundadaItem.js"></script>
 
