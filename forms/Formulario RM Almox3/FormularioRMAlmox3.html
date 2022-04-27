@@ -46,6 +46,7 @@
 							<div class="form-group">
 								<label class="control-label cor-preta required" for="estabelecimento">Estabelecimento</label>
 								<select class="form-control" name="estabelecimento" id="estabelecimento">
+									<option selected disabled>Selecione o Estabelecimento</option>
 									<option value="101">101 - ATLANTIC NICKEL MINERACAO LTDA</option>
 									<option value="201">201 - MINERADORA VALE VERDE LTDA</option>
 								</select>
@@ -58,7 +59,7 @@
 								<label class="control-label cor-preta required" for="usernameDataSUL">Requisitante</label>
 								<div class="input-group">
 									<div class="input-group-addon">
-										<i class="fluigicon fluigicon-user icon-sm"></i>
+										<img src="assets/fluigicon-user.png" alt="fluigicon-user" width="16px" height="16px">
 									</div>
 									<input type="text" class="form-control" name="usernameDataSUL" id="usernameDataSUL">
 								</div>
@@ -71,7 +72,7 @@
 								<label class="control-label cor-preta required" for="dataRequisicao">Data da Requisição</label>
 								<div class="input-group">
 									<div class="input-group-addon">
-										<i class="fluigicon fluigicon-calendar icon-sm"></i>
+										<img src="assets/fluigicon-calendar.png" alt="fluigicon-calendar" width="16px" height="16px">
 									</div>
 									<input type="text" class="form-control" name="DataRequisicao" id="dataRequisicao">
 								</div>
@@ -93,40 +94,33 @@
 						<div class="col-md-3">
 							<div class="form-group">
 								<label class="control-label cor-preta required" for="item">Código do Item</label>
-								<div class="input-group input-group-sm">
+								<div class="input-group">
 									<input type="text" class="form-control" name="codigoItem" id="codigoItem">
 									<span class="input-group-btn">
 										<button class="btn btn-blue-gradient" type="button" id="pesquisa-aprofundada">
-											<i class="fluigicon fluigicon-search icon-sm"></i>
+											Pesquisar <img src="assets/fluigicon-search.png" alt="fluigicon-search" width="14px"
+												height="14px">
 										</button>
 									</span>
 								</div>
+								<p class="help-block">Digite o código de registro do item ou clique na lupa</p>
 							</div>
 						</div>
 						<div class="col-md-5">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="descricaoItem">Descrição do Item</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="descricaoItem" id="descricaoItem" readonly>
-								</div>
+								<input type="text" class="form-control" name="descricaoItem" id="descricaoItem" readonly>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="control-label cor-preta" for="referencia">Referência</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="referencia" id="referencia" readonly>
-								</div>
-							</div>
-						</div>
+
 					</div>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="unidadeMedida">Unidade de Medida</label>
-								<div class="input-group input-group-sm">
+								<div class="input-group">
 									<div class="input-group-addon">
-										<i class="fluigicon fluigicon-query-gap icon-sm"></i>
+										<img src="assets/fluigicon-query-gap.png" alt="fluigicon-query-gap" width="16px" height="16px">
 									</div>
 									<input type="text" class="form-control" name="unidadeMedida" id="unidadeMedida" readonly>
 								</div>
@@ -137,17 +131,15 @@
 								<label class="control-label cor-preta required" for="quantidadeRequisitada">
 									Quandidade Requisitada
 								</label>
-								<div class="input-group-sm">
+								<div class="input-group-md">
 									<input type="text" class="form-control" name="quantidadeRequisitada" id="quantidadeRequisitada">
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-3">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="codigoUtilizacao">Código de Utilização</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="codigoUtilizacao" id="codigoUtilizacao">
-								</div>
+								<input type="text" class="form-control" name="codigoUtilizacao" id="codigoUtilizacao">
 							</div>
 						</div>
 					</div>
@@ -155,9 +147,7 @@
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="ordemInvestimento">Ordem de Investimento</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="ordemInvestimento" id="ordemInvestimento">
-								</div>
+								<input type="text" class="form-control" name="ordemInvestimento" id="ordemInvestimento">
 							</div>
 						</div>
 					</div>
@@ -165,9 +155,7 @@
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="conta">Conta Contábil</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="conta" id="conta">
-								</div>
+								<input type="text" class="form-control" name="conta" id="conta">
 							</div>
 						</div>
 					</div>
@@ -175,17 +163,13 @@
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="centroCusto">Centro de Custo</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="centroCusto" id="centroCusto">
-								</div>
+								<input type="text" class="form-control" name="centroCusto" id="centroCusto">
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="unidadeNegocio">Unidade de Negócio</label>
-								<div class="input-group-sm">
-									<input type="text" class="form-control" name="unidadeNegocio" id="unidadeNegocio">
-								</div>
+								<input type="text" class="form-control" name="unidadeNegocio" id="unidadeNegocio">
 							</div>
 						</div>
 					</div>
