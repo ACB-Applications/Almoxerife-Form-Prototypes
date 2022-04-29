@@ -8,7 +8,7 @@ $("[name=usernameDataSUL]").on("keypress", function (event) {
 });
 
 $(
-  "[name=codigoItem],[name=codigoUtilizacao],[name=ordemInvestimento],[name=conta],[name=centroCusto]"
+  "[name=codigoItem],[name=quantidadeRequisitada],[name=codigoUtilizacao],[name=ordemInvestimento],[name=conta],[name=centroCusto]"
 ).on("keypress", function (event) {
   var regex = new RegExp("^[0-9]+$");
   var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
