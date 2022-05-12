@@ -46,7 +46,7 @@
 							<div class="form-group">
 								<label class="control-label cor-preta required" for="estabelecimento">Estabelecimento</label>
 								<select class="form-control" name="estabelecimento" id="estabelecimento">
-									<option selected disabled>Selecione o Estabelecimento</option>
+									<option selected disabled>SELECIONE O ESTABELECIMENTO</option>
 									<option value="101">101 - ATLANTIC NICKEL MINERACAO LTDA</option>
 									<option value="201">201 - MINERADORA VALE VERDE LTDA</option>
 								</select>
@@ -81,7 +81,8 @@
 					</div>
 					<div class="form-group">
 						<label class="cor-preta" for="narrativaRM">Narrativa</label>
-						<textarea class="form-control" name="narrativaRM" id="narrativaRM" rows="6"></textarea>
+						<textarea oninput="handleInput(event)" class="form-control" name="narrativaRM" id="narrativaRM"
+							rows="6"></textarea>
 					</div>
 				</div>
 			</div>
@@ -115,7 +116,8 @@
 						<div class="col-md-5">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="descricaoItem">Descrição do Item</label>
-								<input type="text" class="form-control" name="descricaoItem" id="descricaoItem" readonly>
+								<input type="text" oninput="handleInput(event)" class="form-control" name="descricaoItem"
+									id="descricaoItem" readonly>
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -138,7 +140,8 @@
 									<div class="input-group-addon">
 										<img src="assets/fluigicon-query-gap.png" alt="fluigicon-query-gap" width="16px" height="16px">
 									</div>
-									<input type="text" class="form-control" name="unidadeMedida" id="unidadeMedida" readonly>
+									<input type="text" oninput="handleInput(event)" class="form-control" name="unidadeMedida"
+										id="unidadeMedida" readonly>
 								</div>
 							</div>
 						</div>
@@ -163,8 +166,8 @@
 						<div class="col-md-5">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="descricaoCodigoUtilizacao">Descrição</label>
-								<input type="text" class="form-control" name="descricaoCodigoUtilizacao" id="descricaoCodigoUtilizacao"
-									readonly>
+								<input type="text" oninput="handleInput(event)" class="form-control" name="descricaoCodigoUtilizacao"
+									id="descricaoCodigoUtilizacao" readonly>
 							</div>
 						</div>
 					</div>
@@ -186,8 +189,8 @@
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="descricaoContaContabil">Descrição</label>
-								<input type="text" class="form-control" name="descricaoContaContabil" id="descricaoContaContabil"
-									readonly>
+								<input type="text" oninput="handleInput(event)" class="form-control" name="descricaoContaContabil"
+									id="descricaoContaContabil" readonly>
 							</div>
 						</div>
 					</div>
@@ -201,7 +204,8 @@
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="descricaoCentroCusto">Descrição</label>
-								<input type="text" class="form-control" name="descricaoCentroCusto" id="descricaoCentroCusto" readonly>
+								<input type="text" oninput="handleInput(event)" class="form-control" name="descricaoCentroCusto"
+									id="descricaoCentroCusto" readonly>
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -213,7 +217,8 @@
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label cor-preta" for="descricaoUN">Descrição</label>
-								<input type="text" class="form-control" name="descricaoUN" id="descricaoUN" readonly>
+								<input type="text" oninput="handleInput(event)" class="form-control" name="descricaoUN" id="descricaoUN"
+									readonly>
 							</div>
 						</div>
 					</div>
@@ -305,6 +310,7 @@
 
 <script type="text/javascript" src="adicionarItem.js"></script>
 <script type="text/javascript" src="datapicker.js"></script>
+<script type="text/javascript" src="handleInput.js"></script>
 <script type="text/javascript" src="inserirDataAtual.js"></script>
 <script type="text/javascript" src="lockout.js"></script>
 <script type="text/javascript" src="maskInput.js"></script>
