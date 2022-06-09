@@ -1,11 +1,11 @@
-const templateTableTr = (item) => { 
+const templateTableTr = (item) => {
   return `
   <tr class="tr-tbody">
     <td>${item.seq}</td>
     <td>${item.item}</td>
     <td>
       <div class="container-desc">
-        <div class="content-desc-td">
+        <div class="content-desc">
           ${item.descricao}
         </div>
       </div>
@@ -18,7 +18,7 @@ const templateTableTr = (item) => {
     <td>${item.saldo}</td>
     <td>${item.qtdeAtendida}</td>
   </tr>
-  `
-}
+  `;
+};
 
 export { templateTableTr };
