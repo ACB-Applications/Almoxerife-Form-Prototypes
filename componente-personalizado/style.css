@@ -88,3 +88,11 @@ body {
   white-space: nowrap;
 } 
 */
+
+.select-menu {
+  width: 160px;
+  height: 32px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
