@@ -17,6 +17,16 @@ const templateTableTr = (item) => {
     <td>${item.localizacao}</td>
     <td>${item.saldo}</td>
     <td>${item.qtdeAtendida}</td>
+    <td>
+      <div class="container-select">
+        <select class="select-menu">
+          <option selected disabled>Selecione um status</option>
+          <option>TOTAL</option>
+          <option>PARCIAL</option>
+          <option>NÃO ATENDIDO</option>
+        </select>
+      </div>
+    </td>
   </tr>
   `;
 };
